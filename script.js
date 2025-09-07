@@ -1,16 +1,16 @@
-let cart = [];
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".buy-btn");
+  const form = document.getElementById("orderForm");
 
-function addToCart(product) {
-  cart.push(product);
-  updateCart();
-}
-
-function updateCart() {
-  let cartList = document.getElementById("cart-items");
-  cartList.innerHTML = "";
-  cart.forEach(item => {
-    let li = document.createElement("li");
-    li.textContent = item;
-    cartList.appendChild(li);
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      alert("Товар добавлен в корзину (пока корзина условная)");
+    });
   });
-}
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Заказ успешно оформлен!");
+    form.reset();
+  });
+});
