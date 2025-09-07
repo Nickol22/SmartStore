@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>SmartStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header>
+    <nav>
+      <h1>SmartStore</h1>
+      <ul>
+        <li><a href="#iphone">iPhone</a></li>
+        <li><a href="#watch">Watch</a></li>
+        <li><a href="#mac">Mac</a></li>
+        <li><a href="#airpods">AirPods</a></li>
+        <li><a href="#accessories">Аксессуары</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Баннер -->
+  <section class="banner">
+    <h2>Новые iPhone 17 Pro Max</h2>
+    <img src="https://www.apple.com/v/iphone/home/ai/images/meta/iphone__ky2k6x5u6vue_og.png" alt="iPhone 17">
+  </section>
+
+  <!-- iPhone -->
+  <section id="iphone" class="products">
+    <h2>iPhone</h2>
+    <div class="card">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-max-finish-select-202309-6-7inch-bluetitanium?wid=5120" alt="iPhone 15 Pro">
+      <p>iPhone 15 Pro</p>
+      <button onclick="addToCart('iPhone 15 Pro')">Купить</button>
+    </div>
+    <div class="card">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-blue?wid=5120" alt="iPhone 15">
+      <p>iPhone 15</p>
+      <button onclick="addToCart('iPhone 15')">Купить</button>
+    </div>
+  </section>
+
+  <!-- Watch -->
+  <section id="watch" class="products">
+    <h2>Apple Watch</h2>
+    <div class="card">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQEE3ref_VW_PF+watch-case-45-titanium-ultra2-cell-se_VW_PF+watch-face-45-ocean-ultra2_VW_PF?wid=400" alt="Apple Watch Ultra">
+      <p>Apple Watch Ultra</p>
+      <button onclick="addToCart('Apple Watch Ultra')">Купить</button>
+    </div>
+    <div class="card">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAL2_VW_34FR+watch-40-alum-silver-nc-se_VW_34FR_WF_CO_GEO_RU?wid=400" alt="Apple Watch SE">
+      <p>Apple Watch SE</p>
+      <button onclick="addToCart('Apple Watch SE')">Купить</button>
+    </div>
+  </section>
+
+  <!-- Mac -->
+  <section id="mac" class="products">
+    <h2>Mac</h2>
+    <div class="card">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-silver-select-202301?wid=904" alt="MacBook Pro 16">
+      <p>MacBook Pro 16</p>
+      <button onclick="addToCart('MacBook Pro 16')">Купить</button>
+    </div>
+    <div class="card">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/imac-24-select-202310?wid=400" alt="iMac 24">
+      <p>iMac 24</p>
+      <button onclick="addToCart('iMac 24')">Купить</button>
+    </div>
+  </section>
+
+  <!-- AirPods -->
+  <section id="airpods" class="products">
+    <h2>AirPods</h2>
+    <div class="card">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=400" alt="AirPods Pro 2">
+      <p>AirPods Pro 2</p>
+      <button onclick="addToCart('AirPods Pro 2')">Купить</button>
+    </div>
+    <div class="card">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MME73?wid=400" alt="AirPods 3">
+      <p>AirPods 3</p>
+      <button onclick="addToCart('AirPods 3')">Купить</button>
+    </div>
+  </section>
+
+  <!-- Аксессуары -->
+  <section id="accessories" class="products">
+    <h2>Аксессуары</h2>
+    <div class="card">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MLWK3?wid=400" alt="AirTag">
+      <p>AirTag</p>
+      <button onclick="addToCart('AirTag')">Купить</button>
+    </div>
+    <div class="card">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU8H2?wid=400" alt="Apple Pencil">
+      <p>Apple Pencil</p>
+      <button onclick="addToCart('Apple Pencil')">Купить</button>
+    </div>
+  </section>
+
+  <!-- Корзина -->
+  <section class="cart">
+    <h2>Корзина</h2>
+    <ul id="cart-items"></ul>
+    <a href="checkout.html"><button>Перейти к оплате</button></a>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
