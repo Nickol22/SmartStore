@@ -2,101 +2,132 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>iPhone 17 Pro Max</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f8f9fa;
-    }
-
-    header {
-      background: #000;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      font-size: 24px;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 30px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .card h2 {
-      margin: 15px 0 10px;
-      font-size: 20px;
-    }
-
-    .card p {
-      font-size: 16px;
-      color: #555;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #007aff;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background: #005bb5;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartStore</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>iPhone 17 Pro Max</header>
+  <!-- Шапка -->
+  <header>
+    <h1>SmartStore</h1>
+    <nav>
+      <ul>
+        <li><a href="#iphone">iPhone</a></li>
+        <li><a href="#watch">Apple Watch</a></li>
+        <li><a href="#mac">Mac</a></li>
+        <li><a href="#airpods">AirPods</a></li>
+        <li><a href="#accessories">Аксессуары</a></li>
+      </ul>
+    </nav>
+    <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+  </header>
 
-  <div class="container">
-    <div class="card">
-      <img src="https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-15-Pro-lineup-hero-230912_big.jpg.large.jpg" alt="iPhone 17 Pro Max">
-      <h2>iPhone 17 Pro Max</h2>
-      <p>Новый уровень мощности и дизайна</p>
-      <a href="#" class="btn">Купить</a>
+  <!-- Новые iPhone -->
+  <section id="new-iphone">
+    <h2>Новые iPhone 17 Pro Max</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://via.placeholder.com/200x250" alt="iPhone 17 Pro Max">
+        <h3>iPhone 17 Pro Max</h3>
+        <p>Цена: $1299</p>
+        <button onclick="addToCart('iPhone 17 Pro Max', 1299)">Купить</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200x250" alt="iPhone 17 Pro Max">
+        <h3>iPhone 17 Pro Max</h3>
+        <p>Цена: $1299</p>
+        <button onclick="addToCart('iPhone 17 Pro Max', 1299)">Купить</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200x250" alt="iPhone 17 Pro Max">
+        <h3>iPhone 17 Pro Max</h3>
+        <p>Цена: $1299</p>
+        <button onclick="addToCart('iPhone 17 Pro Max', 1299)">Купить</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/200x250" alt="iPhone 17 Pro Max">
+        <h3>iPhone 17 Pro Max</h3>
+        <p>Цена: $1299</p>
+        <button onclick="addToCart('iPhone 17 Pro Max', 1299)">Купить</button>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <img src="https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-15-Pro-lineup-hero-230912_big.jpg.large.jpg" alt="iPhone 17 Pro Max">
-      <h2>iPhone 17 Pro Max</h2>
-      <p>Современные технологии в твоих руках</p>
-      <a href="#" class="btn">Купить</a>
+  <!-- Другие категории -->
+  <section id="iphone">
+    <h2>iPhone</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://via.placeholder.com/200x250" alt="iPhone 16 Pro">
+        <h3>iPhone 16 Pro</h3>
+        <p>Цена: $1099</p>
+        <button onclick="addToCart('iPhone 16 Pro', 1099)">Купить</button>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <img src="https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-15-Pro-lineup-hero-230912_big.jpg.large.jpg" alt="iPhone 17 Pro Max">
-      <h2>iPhone 17 Pro Max</h2>
-      <p>Элегантность и производительность</p>
-      <a href="#" class="btn">Купить</a>
+  <section id="watch">
+    <h2>Apple Watch</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://via.placeholder.com/200x250" alt="Apple Watch">
+        <h3>Apple Watch</h3>
+        <p>Цена: $499</p>
+        <button onclick="addToCart('Apple Watch', 499)">Купить</button>
+      </div>
     </div>
+  </section>
+
+  <section id="mac">
+    <h2>Mac</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://via.placeholder.com/200x250" alt="MacBook">
+        <h3>MacBook Pro</h3>
+        <p>Цена: $1999</p>
+        <button onclick="addToCart('MacBook Pro', 1999)">Купить</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="airpods">
+    <h2>AirPods</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://via.placeholder.com/200x250" alt="AirPods Pro">
+        <h3>AirPods Pro</h3>
+        <p>Цена: $299</p>
+        <button onclick="addToCart('AirPods Pro', 299)">Купить</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="accessories">
+    <h2>Аксессуары</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://via.placeholder.com/200x250" alt="Чехол">
+        <h3>Чехол</h3>
+        <p>Цена: $49</p>
+        <button onclick="addToCart('Чехол', 49)">Купить</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Корзина -->
+  <div id="cart" class="cart hidden">
+    <h2>Корзина</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Итого: $0</p>
+    <button onclick="checkout()">Оплатить</button>
+    <button onclick="toggleCart()">Закрыть</button>
   </div>
+
+  <!-- Подвал -->
+  <footer>
+    <p>© 2025 SmartStore. Все права защищены.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
