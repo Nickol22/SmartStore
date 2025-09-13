@@ -74,24 +74,24 @@ button {
 }
 
 .buy-btn {
-    background: #27ae60;
+    background:#27ae60;
     color: white;
 }
 
 .cart-btn {
-    background: #2980b9;
+    background:#2980b9;
     color: white;
 }
 
 /* Корзина */
 .cart-section {
     padding: 40px 20px;
-    background: #f4f4f4;
+    background:#f4f4f4;
 }
 
 #cart-list {
     list-style: none;
-    padding: 0;
+    padding:0;
 }
 
 #cart-list li {
