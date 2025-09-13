@@ -1,102 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Store</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Store - Магазин техники</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Шапка -->
-    <header>
-        <div class="logo">Smart Store</div>
-        <nav>
-            <ul>
-                <li><a href="#iphone">iPhone</a></li>
-                <li><a href="#mac">Mac</a></li>
-                <li><a href="#watch">Watch</a></li>
-                <li><a href="#air">Air</a></li>
-                <li><a href="#pods">Pods</a></li>
-                <li><a href="#accessories">Аксессуары</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Smart Store</h1>
+      <nav class="nav">
+        <a href="#products">Каталог</a>
+        <a href="#about">О магазине</a>
+        <a href="checkout.html" id="cart-link">Корзина (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Разделы -->
-    <section id="iphone" class="product-section">
-        <h2>iPhone</h2>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/200" alt="iPhone">
-            <h3>iPhone 15 Pro</h3>
-            <p>Цена: 1200$</p>
-            <button class="buy-btn">Купить</button>
-            <button class="cart-btn">Добавить в корзину</button>
+  <main class="container">
+    <section class="hero">
+      <h2>Лучшие гаджеты - iPhone, MacBook, AirPods и аксессуары</h2>
+      <p>Красиво. Быстро. Надежно. Твой персональный Smart Store.</p>
+      <a href="#products" class="btn">Перейти в каталог</a>
+    </section>
+
+    <section id="products" class="products-grid">
+      <!-- Продукты будут подгружены скриптом -->
+    </section>
+
+    <section id="about" class="about">
+      <h3>О магазине</h3>
+      <p>Мы — SmartStore. Здесь вы найдёте всё, что нужно для удобной и современной жизни. У нас только качественные товары, выгодные цены и сервис, который всегда рядом. SmartStore — умный выбор для умных людей!</p>
+    </section>
+  </main>
+
+  <template id="product-card-template">
+    <article class="product-card">
+      <img class="product-image" alt="product">
+      <div class="product-body">
+        <h4 class="product-title"></h4>
+        <p class="product-price"></p>
+        <div class="product-actions">
+          <button class="btn btn-outline details-btn">Подробнее</button>
+          <button class="btn buy-btn">Купить</button>
         </div>
-    </section>
+      </div>
+    </article>
+  </template>
 
-    <section id="mac" class="product-section">
-        <h2>Mac</h2>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/200" alt="MacBook">
-            <h3>MacBook Pro</h3>
-            <p>Цена: 2000$</p>
-            <button class="buy-btn">Купить</button>
-            <button class="cart-btn">Добавить в корзину</button>
-        </div>
-    </section>
+  <!-- Modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="Закрыть">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
 
-    <section id="watch" class="product-section">
-        <h2>Watch</h2>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/200" alt="Watch">
-            <h3>Apple Watch</h3>
-            <p>Цена: 500$</p>
-            <button class="buy-btn">Купить</button>
-            <button class="cart-btn">Добавить в корзину</button>
-        </div>
-    </section>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Smart Store - магазин техники</p>
+    </div>
+  </footer>
 
-    <section id="air" class="product-section">
-        <h2>Air</h2>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/200" alt="iPad Air">
-            <h3>iPad Air</h3>
-            <p>Цена: 800$</p>
-            <button class="buy-btn">Купить</button>
-            <button class="cart-btn">Добавить в корзину</button>
-        </div>
-    </section>
-
-    <section id="pods" class="product-section">
-        <h2>Pods</h2>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/200" alt="AirPods">
-            <h3>AirPods Pro</h3>
-            <p>Цена: 300$</p>
-            <button class="buy-btn">Купить</button>
-            <button class="cart-btn">Добавить в корзину</button>
-        </div>
-    </section>
-
-    <section id="accessories" class="product-section">
-        <h2>Аксессуары</h2>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/200" alt="Accessories">
-            <h3>Чехол для iPhone</h3>
-            <p>Цена: 50$</p>
-            <button class="buy-btn">Купить</button>
-            <button class="cart-btn">Добавить в корзину</button>
-        </div>
-    </section>
-
-    <!-- Корзина -->
-    <section id="cart" class="cart-section">
-        <h2>Корзина</h2>
-        <ul id="cart-list"></ul>
-        <p id="cart-total">Итого: 0$</p>
-        <button id="checkout-btn">Оплатить</button>
-    </section>
-
-    <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
