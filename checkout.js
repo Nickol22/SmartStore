@@ -1,6 +1,6 @@
 // checkout.js - reads cart from localStorage and allows submitting a fake order
 function priceFormat(n){ return n.toLocaleString('ru-RU',{style:'currency',currency:'USD'}).replace('US$','$') }
-const PRODUCTS = [{"id": "iphone-15", "title": "iPhone 15 Pro", "price": 1099, "desc": "Новый iPhone 15 Pro - мощный A-серии чип, потрясающий экран.", "img": "images/iphone.svg"}, {"id": "macbook-air", "title": "MacBook Air 13\"", "price": 1299, "desc": "Тонкий и лёгкий ноутбук с отличной автономностью.", "img": "images/macbook.svg"}, {"id": "airpods-pro", "title": "AirPods Pro", "price": 249, "desc": "Шумоподавление, адаптивный эквалайзер.", "img": "images/airpods.svg"}, {"id": "apple-watch", "title": "Apple Watch Series 9", "price": 399, "desc": "Здоровье, тренировки и стиль на запястье.", "img": "images/watch.svg"}, {"id": "magsafe", "title": "Зарядка MagSafe", "price": 39, "desc": "Быстрая магнитная зарядка для iPhone.", "img": "images/magsafe.svg"}, {"id": "case", "title": "Силиконовый чехол", "price": 29, "desc": "Защити телефон и добавь цвета.", "img": "images/case.svg"}];
+const PRODUCTS = [{"id": "iphone-15", "title": "iPhone 15 Pro", "price": 1099, "desc": "Новый iPhone 15 Pro - мощный A-серии чип, потрясающий экран.", "img": "images/iphone.jpg"}, {"id": "macbook-air", "title": "MacBook Air 13\"", "price": 1299, "desc": "Тонкий и лёгкий ноутбук с отличной автономностью.", "img": "images/macbook.jpg"}, {"id": "airpods-pro", "title": "AirPods Pro", "price": 249, "desc": "Шумоподавление, адаптивный эквалайзер.", "img": "images/airpods.jpg"}, {"id": "apple-watch", "title": "Apple Watch Series 9", "price": 399, "desc": "Здоровье, тренировки и стиль на запястье.", "img": "images/watch.jpg"}, {"id": "magsafe", "title": "Зарядка MagSafe", "price": 39, "desc": "Быстрая магнитная зарядка для iPhone.", "img": "images/magsafe.jpg"}, {"id": "case", "title": "Силиконовый чехол", "price": 29, "desc": "Защити телефон и добавь цвета.", "img": "images/case.jpg"}];
 const cartArea = document.getElementById('cart-area');
 const orderForm = document.getElementById('order-form');
 const orderResult = document.getElementById('order-result');
@@ -71,7 +71,7 @@ orderForm.addEventListener('submit', e=>{
   renderCart();
   orderForm.classList.add('hidden');
   orderResult.classList.remove('hidden');
-  orderResult.innerHTML = `<div class="order-success"><h3>Спасибо, ${order.name}!</h3><p>Ваш заказ ${order.id} принят. Мы свяжемся с вами по телефону ${order.phone}.</p><p class="small">Это демонстрационная страница - реальная оплата не выполняется.</p><p><a href="index.html" class="btn">Вернуться в каталог</a></p></div>`;
+  orderResult.innerHTML = `<div class="order-success"><h3>Спасибо, ${order.name}!</h3><p>Ваш заказ ${order.id} принят. Мы свяжемся с вами по телефону ${order.phone}.</p><p class="small"></p><p><a href="index.html" class="btn">Вернуться в каталог</a></p></div>`;
   orderResult.scrollIntoView({behavior:'smooth'});
 });
 
